@@ -6,3 +6,24 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+dotenv = "*"
+tracing = "*"
+tracing-subscriber = "*"
+
+[dependencies.tokio]
+features = ["macros", "signal", "rt-multi-thread"]
+version = "*"
+
+[dependencies.serenity]
+features = [
+  "cache",
+  "framework",
+  "standard_framework",
+  "rustls_backend",
+  "client",
+  "gateway",
+  "model",
+  "collector",
+  "builder",
+]
+version = "*"
